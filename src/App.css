@@ -1,0 +1,278 @@
+/* Estilos generales para la aplicación */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #F3F4F6;  /* Fondo principal */
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  color: #1F2937;  /* Texto principal */
+}
+
+/* Contenedor principal de la app */
+.App {
+  text-align: center;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #1F2937;  /* Fondo oscuro para el encabezado */
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #3B82F6;  /* Azul brillante para los enlaces */
+  text-decoration: none;
+  font-weight: bold;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Estilos para el formulario de login */
+.login-container {
+  width: 100%;
+  max-width: 450px;
+  padding: 30px;
+  background-color: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  margin-top: 20px;
+}
+
+.login-container h2 {
+  margin-bottom: 20px;
+  color: #1F2937;  /* Título del login */
+}
+
+.login-input {
+  padding: 12px;
+  width: 100%;
+  margin: 12px 0;
+  border-radius: 5px;
+  border: 1px solid #D1D5DB;  /* Borde suave */
+  font-size: 16px;
+  transition: border-color 0.3s;
+}
+
+.login-input:focus {
+  outline: none;
+  border-color: #3B82F6;  /* Azul brillante para el foco */
+}
+
+.login-button {
+  padding: 12px 20px;
+  background-color: #3B82F6;  /* Azul brillante para el botón */
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  width: 100%;
+  transition: background-color 0.3s ease;
+}
+
+.login-button:hover {
+  background-color: #2563EB;  /* Azul más oscuro al hacer hover */
+}
+
+.login-button:active {
+  background-color: #1D4ED8;  /* Azul aún más oscuro al hacer clic */
+}
+
+/* Estilos para la página de búsqueda */
+.search-page {
+  width: 90%;
+  max-width: 1000px;
+  background-color: #ffffff;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  margin-top: 30px;
+}
+
+.search-input {
+  padding: 12px;
+  width: 300px;
+  margin-right: 10px;
+  border-radius: 5px;
+  border: 1px solid #D1D5DB;  /* Borde suave */
+  font-size: 16px;
+  transition: border-color 0.3s;
+}
+
+.search-input:focus {
+  border-color: #3B82F6;  /* Azul brillante para el foco */
+}
+
+.search-button {
+  padding: 12px 25px;
+  background-color: #10B981;  /* Verde brillante para el botón */
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s;
+}
+
+.search-button:hover {
+  background-color: #059669;  /* Verde más oscuro al hacer hover */
+}
+
+.search-button:active {
+  background-color: #047857;  /* Verde aún más oscuro al hacer clic */
+}
+
+/* Contenedor de la lista de juegos */
+.game-list {
+  display: flex;
+  overflow-x: auto; /* Permite el desplazamiento horizontal */
+  gap: 40px; /* Mayor espaciado entre las tarjetas */
+  margin-top: 30px;
+  padding: 20px 0;
+  scroll-snap-type: x mandatory; /* Alineación suave al hacer scroll */
+}
+
+/* Estilos generales para las tarjetas de juegos */
+.game-card {
+  background-color: #ffffff;
+  padding: 40px; /* Aumento del padding para más espacio en la tarjeta */
+  border-radius: 20px; /* Esquinas redondeadas más grandes */
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15); /* Sombra más pronunciada */
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  flex-shrink: 0;
+  min-width: 1000px; /* Aumento del ancho mínimo de las tarjetas */
+  scroll-snap-align: start;
+  height: 600 px; /* Aumento de la altura de las tarjetas */
+}
+
+/* Efecto hover de la tarjeta */
+.game-card:hover {
+  transform: scale(1.1); /* Aumento del efecto de escala */
+  box-shadow: 0 16px 30px rgba(0, 0, 0, 0.25); /* Sombra más fuerte */
+}
+
+.game-image {
+  width: 100%;
+  height: 300px; /* Aumento del tamaño de la imagen */
+  object-fit: cover; /* La imagen ocupa todo el espacio sin deformarse */
+  border-radius: 15px;
+  margin-bottom: 20px; /* Mayor espacio debajo de la imagen */
+}
+
+.game-title {
+  font-size: 2rem; /* Aumento del tamaño del título */
+  font-weight: bold;
+  margin-top: 15px;
+  color: #1F2937;
+  text-transform: capitalize;
+}
+
+.game-description {
+  font-size: 1.2rem; /* Aumento del tamaño del texto de la descripción */
+  color: #6B7280;
+  margin: 15px 0;
+  height: 100px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* Contenedor de la calificación */
+.rating {
+  margin-top: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Estilo general de las estrellas */
+.star {
+  font-size: 3.5rem; /* Tamaño más grande para las estrellas */
+  color: #ddd; /* Color de fondo gris para las estrellas no seleccionadas */
+  cursor: pointer;
+  transition: color 0.3s ease, transform 0.2s ease;
+  margin: 0 5px; /* Espaciado entre las estrellas */
+}
+
+/* Estilo cuando la estrella está seleccionada */
+.star.selected {
+  color: #f59e0b; /* Color dorado para las estrellas seleccionadas */
+  transform: scale(1.2); /* Efecto de aumentar el tamaño de la estrella seleccionada */
+}
+
+/* Efecto de hover para las estrellas */
+.star:hover {
+  color: #ffcc00; /* Color dorado brillante al pasar el cursor */
+  transform: scale(1.1); /* Efecto de escala al pasar el cursor */
+}
+
+/* Estilo para cuando se seleccionan varias estrellas */
+.rating-message {
+  font-size: 1.2rem;
+  margin-left: 10px;
+  color: #333;
+  font-weight: bold;
+}
+
+/* Transición de color para el contenedor de las estrellas */
+.rating:hover .star {
+  transition: transform 0.2s ease, color 0.2s ease;
+}
+
+
+/* Media Queries para pantallas pequeñas */
+@media (max-width: 768px) {
+  .game-list {
+    flex-wrap: nowrap; /* Evita que las tarjetas se acomoden en filas */
+    gap: 20px;
+    padding: 10px 0;
+  }
+
+  .game-card {
+    min-width: 350px; /* Ajuste en el tamaño de las tarjetas en pantallas pequeñas */
+    height: 500px; /* Ajuste en la altura de las tarjetas */
+  }
+
+  .game-image {
+    height: 250px; /* Ajuste en el tamaño de la imagen en pantallas pequeñas */
+  }
+
+  .game-title {
+    font-size: 1.6rem; /* Ajuste en el tamaño del título */
+  }
+
+  .game-description {
+    font-size: 1.1rem; /* Ajuste en el tamaño de la descripción */
+  }
+}
+
