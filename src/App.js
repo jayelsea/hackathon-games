@@ -1,7 +1,7 @@
 
-import React, { useState } from 'react'; // Asegúrate de importar useState
-import Login from './components/Login';   // Asegúrate de importar el componente Login
-import SearchPage from './pages/SearchPage'; // Si es necesario, ajusta la ruta
+import React, { useState } from 'react'; 
+import Login from './components/Login';  
+import SearchPage from './pages/SearchPage';
 
 const App = () => {
   const [user, setUser] = useState(null);
